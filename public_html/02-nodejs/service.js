@@ -15,37 +15,63 @@ var listerToutesLesSessions = function(){
 
 var trouverUneSession = function(idSession){
     if(idSession){
-        return moduleDevfest.sessions.find(
+        console.log(moduleDevfest.sessions.find(
             function(element){
                 return element.id===idSession;
             }
-        );
+        ));
     }else{
-        return "Merci de renseigner un identifiant de session séparé par un espace";
+        console.log("Merci de renseigner un identifiant de session séparé par un espace");
     }
 };
 
 var listerTopPresentateurs = function(){
     return moduleDevfest.speakers.filter(
-        function(element, index, array){
+        function(element){
             return element.topspeaker;
         }
     );
 };
 
-var text = '*** Application Conférence ***\n\
-1. Liste de tous les présentateurs\n\
-2. Top présentateurs\n\
-3. Liste des sessions\n\
-4. Détail d\'une session\n\
-99. Quitter\n\
-';
-var functions = {
-    1 : listerTousLesPresentateurs,
-    2 : listerTopPresentateurs,
-    3 : listerToutesLesSessions,
-    4 : trouverUneSession
+const afficherPresentateurs = function(pres){
+    console.log(pres);
+    pres.forEach(function(element, index){
+        let topSpeaker = "";
+        if(element.topspeaker){
+            topSpeaker = "[TOP] ";
+        }
+        let ribon = "";
+        if(element.ribon){
+            ribon = "("+element.category.title+" -> "+element.ribon.title+")";
+        }
+       console.log(index+".",topSpeaker+element.firstname, element.lastname, ribon);
+    });
 };
+
+var functions=[{
+        libelle : "Liste de tous les présentateurs",
+        call : afficherPresentateurs(listerTousLesPresentateurs())
+    },{
+        libelle : "Top des présentateurs",
+        call : afficherPresentateurs(listerTopPresentateurs)
+    },{
+        libelle : "Liste des sessions",
+        call : listerToutesLesSessions
+    },{
+        param : true,
+        libelle : "Détail d'une session",
+        call : trouverUneSession
+    }
+];
+
+var text = '*** Application Conférence ***\n';
+functions.forEach(function(element, index){
+    text += index+". "+element.libelle+"\n";
+});
+text += "99. Quitter\n";
+
+rl.setPrompt(text, text.length);
+rl.prompt();
 rl.on('line', function(answerTemp){
     answer = answerTemp;
     var command = answer.split(" ")[0];
@@ -53,11 +79,13 @@ rl.on('line', function(answerTemp){
     if(command==='99'){
         rl.close();
     }else if(functions[command]){
-        console.log(functions[command](param));
+        if(functions[command].param){
+            functions[command].call(param);
+        }else{
+            functions[command].call;
+        }
     }
     rl.prompt();
 }).on('close', function(){
     process.exit(0);
 });
-rl.setPrompt(text, text.length);
-rl.prompt();
