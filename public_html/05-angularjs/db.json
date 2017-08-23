@@ -1,0 +1,213 @@
+{
+
+  "trips": [
+    {
+      "id": "paris",
+      "name": "Paris",
+      "imageUrl": "img/paris.jpg"
+    },
+    {
+      "id": "nyc",
+      "name": "New York",
+      "imageUrl": "img/nyc.jpg"
+    },
+    {
+      "id": "rome",
+      "name": "Rome",
+      "imageUrl": "img/rome.jpg"
+    },
+    {
+      "id": "rio-de-janeiro",
+      "name": "Rio de Janeiro",
+      "imageUrl": "img/rio-de-janeiro.jpg"
+    },
+    {
+      "id": "tokyo",
+      "name": "Tokyo",
+      "imageUrl": "img/tokyo.jpg"
+    }
+  ],
+  "trips-details": [
+    {
+      "id": "paris",
+      "name": "Paris",
+      "imageUrl": "img/paris.jpg",
+      "price": "100",
+      "initialPrice": "200",
+      "description": "Déguster un pain au chocolat à la terrasse d'un café, se délasser après une journée de balade sur les quais de la Seine, s'émerveiller devant des lieux symboliques comme la Tour Eiffel ou l'Arc de triomphe… Un séjour à Paris réussi conjugue activités et détente, tout en prenant le temps de savourer un bon repas tout comme les célèbres expositions du Louvre. Commencez par prendre des forces à Notre-Dame, puis partez à la chasse aux bonnes affaires au marché aux puces de Montreuil ou goûtez aux spécialités vendues au marché biologique de Raspail et pour terminer votre journée en beauté, couronnez le tout par un spectacle osé au Moulin Rouge.",
+      "comments": [
+        {
+          "id": "sky44",
+          "text": "Très bon voyage, je le recommande"
+        },
+        {
+          "id": "jean49",
+          "text": "J'ai détesté"
+        }
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "name": "Visite de la tour Eiffel",
+          "imageUrl": "img/paris-toureiffel.jpg"
+        },
+        {
+          "number": 2,
+          "name": "Arc de Triomphe",
+          "imageUrl": "img/paris-arctriomphe.jpg"
+        },
+        {
+          "number": 3,
+          "name": "Musée du louvre",
+          "imageUrl": "img/paris-museelouvre.jpg"
+        }
+      ],
+      "geolocation": {
+        "latitude": 48.85661,
+        "longitude": 2.35222
+      }
+    },
+    {
+      "id": "nyc",
+      "name": "New York",
+      "imageUrl": "img/nyc.jpg",
+      "price": "412",
+      "initialPrice": "500",
+      "description": "Puisqu'une seule visite ne suffit pas pour conquérir New York, concentrez-vous plutôt sur l'essentiel : l'Empire State Building, la Statue de la Liberté, Central Park, le Metropolitan Museum of Art, puis sortez des sentiers battus en visitant The Cloisters ou l'une des bibliothèques de la ville. Allez faire les boutiques au style bohème à West Village ou savourez la gastronomie du Upper West Side. Mais imprégnez-vous de l'effervescence régnant dans le marché abrité à l'intérieur de Grand Central Station pour avoir un véritable avant-goût du meilleur que la ville a à vous offrir.",
+      "comments": [
+        {
+          "id": "albert",
+          "text": "Très bon voyage, je le recommande"
+        },
+        {
+          "id": "marc",
+          "text": "J'ai détesté"
+        },
+        {
+          "id": "helene",
+          "text": "Très bon voyage, je le recommande"
+        },
+        {
+          "id": "jean49",
+          "text": "J'ai détesté"
+        }
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "name": "Empire State Building",
+          "imageUrl": "img/nyc-empirestatebuilding.jpg"
+        },
+        {
+          "number": 2,
+          "name": "Brooklyn",
+          "imageUrl": "img/nyc-brooklyn.jpg"
+        },
+        {
+          "number": 3,
+          "name": "Statue de la Liberté",
+          "imageUrl": "img/nyc-statueliberte.jpg"
+        },
+        {
+          "number": 4,
+          "name": "Times Square",
+          "imageUrl": "img/nyc-timessquare.jpg"
+        }
+
+      ],
+      "geolocation": {
+        "latitude": 40.71435,
+        "longitude": -74.00597
+      }
+    },
+    {
+      "id": "rome",
+      "name": "Rome",
+      "imageUrl": "img/rome.jpg",
+      "price": "174",
+      "initialPrice": "180",
+      "description": "Rome ne s'est pas faite en un jour, mais Rome ne se visite pas en un jour non plus. On se croirait dans un gigantesque musée en plein air : vous vous retrouvez au milieu d'un authentique assemblage de « piazzas », de marchés en plein air et de sites historiques fascinants. Jetez une pièce dans la fontaine de Trevi, pâmez-vous d'admiration au Colisée et au Panthéon, puis prenez un cappuccino pour refaire le plein d'énergie au cours d'un après-midi shopping au Campo de'Fiori ou dans la Via Veneto. Enfin, pour conclure votre journée en beauté, offrez-vous un repas inoubliable et en commandez un bon plat de pâtes fraîches, de délicieux artichauts frits ou encore un tendre ragoût de queue de bœuf.",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Panthéon",
+          "imageUrl": "img/rome-pantheon.jpg"
+
+        },
+        {
+          "number": 2,
+          "name": "Basilique Saint-Pierre",
+          "imageUrl": "img/rome-stpierre.jpg"
+        },
+        {
+          "number": 3,
+          "name": "Colisée",
+          "imageUrl": "img/rome-colisee.jpg"
+        }
+      ],
+      "geolocation": {
+        "latitude": 41.89292,
+        "longitude": 12.48252
+      }
+    },
+    {
+      "id": "rio-de-janeiro",
+      "name": "Rio de Janeiro",
+      "imageUrl": "img/rio-de-janeiro.jpg",
+      "price": "830",
+      "initialPrice": "1000",
+      "description": "Quand les projecteurs du monde entier seront braqués sur Rio de Janeiro à l'occasion des Jeux olympiques de 2016, il y a de fortes chances que ce soit la terre entière qui tombe amoureuse de la perle du Brésil. Effectivement, les filles que vous croiserez sur la plage d'Ipanema sont bel et bien jeunes, grandes, bronzées et charmantes ! Quant à l'avenue commerçante, elle est incontournable. En qualité de plus grande statue de style Art déco au monde, le Christ Rédempteur attire les foules sur le mont Corcovado. Et au moment du Carnaval de Rio, la ville vibre au rythme des innombrables fêtes mêlant musique, danse et déguisements colorés.",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Baie de Guanabara",
+          "imageUrl": "img/rio-baieguanabara.jpg"
+        },
+        {
+          "number": 2,
+          "name": "Copacabana",
+          "imageUrl": "img/rio-copacabana.jpg"
+        },
+        {
+          "number": 3,
+          "name": "Santa Térésa",
+          "imageUrl": "img/rio-santateresa.jpg"
+        }
+      ],
+      "geolocation" : {
+        "latitude" : -22.91340,
+        "longitude" : -43.20071
+      }
+    },
+    {
+      "id": "tokyo",
+      "name": "Tokyo",
+      "imageUrl": "img/tokyo.jpg",
+      "price": "960",
+      "initialPrice": "1000",
+      "description": "À Tokyo, où vous pouvez passer avec vénération de la visite d'un temple ancien à une soirée dans un bar karaoké, la tradition se frotte à la culture pop. Soyez debout avant le lever du soleil pour voir toute l'effervescence d'une vente de poissons à la criée au Tsukiji Market, puis profitez d'une promenade sous les cerisiers en fleurs bordant le fleuve Sumida pour vous ressourcer. N'oubliez pas de faire un tour dans les magnifiques jardins East Gardens du palais impérial. Révisez ensuite l'histoire du Japon au musée Edo-Tokyo. Et n'hésitez pas à manger sushi, nouilles udon et wagashi (pâtisseries traditionnelles japonaises) à gogo, tant que votre estomac en réclame !",
+      "steps": [
+        {
+          "number": 1,
+          "name": "Palais impérial",
+          "imageUrl": "img/tokyo-palaisimperial.jpg"
+        },
+        {
+          "number": 2,
+          "name": "Tour de Tokyo",
+          "imageUrl": "img/tokyo-tour.jpg"
+        },
+        {
+          "number": 3,
+          "name": "Sky Tree",
+          "imageUrl": "img/tokyo-skytree.jpg"
+        }
+      ],
+      "geolocation" : {
+        "latitude" : 35.68949,
+        "longitude" : 139.69171
+      }
+    }
+  ]
+
+}

@@ -1,0 +1,19 @@
+<section id="tp02">
+    <h1>TP 02 - Vues et Expressions</h1>
+    <!-- TODO ici bientôt des directives -->
+    <select ng-model="show">
+        <option value="true">Affiché</option>
+        <option value="false">Caché</option>
+    </select>
+    <p ng-show="show == 'true'">Affiché :<br>Et olim licet otiosae sint tribus pacataeque centuriae et nulla suffragiorum certamina set Pompiliani redierit securitas temporis, per omnes tamen quotquot sunt partes terrarum, ut domina suscipitur et regina et ubique patrum reverenda cum auctoritate canities populique Romani nomen circumspectum et verecundum</p>
+    <p ng-hide="show == 'true'">Caché :<br>Et olim licet otiosae sint tribus pacataeque centuriae et nulla suffragiorum certamina set Pompiliani redierit securitas temporis, per omnes tamen quotquot sunt partes terrarum, ut domina suscipitur et regina et ubique patrum reverenda cum auctoritate canities populique Romani nomen circumspectum et verecundum</p>
+    <p ng-if="show == 'true'">ng-if :<br>Et olim licet otiosae sint tribus pacataeque centuriae et nulla suffragiorum certamina set Pompiliani redierit securitas temporis, per omnes tamen quotquot sunt partes terrarum, ut domina suscipitur et regina et ubique patrum reverenda cum auctoritate canities populique Romani nomen circumspectum et verecundum</p>
+    <div ng-switch="show">
+        <div ng-switch-when="true">Affiché</div>
+        <div ng-switch-when="false">Caché</div>
+        <div ng-switch-default>Par défaut</div>
+    </div>
+    <div ng-repeat="nb in [1,2,3,4]">
+        <p>Item N° {{nb}}</p>
+    </div>
+</section>

@@ -1,0 +1,39 @@
+<section id="tp04">
+    <h1>TP 04 - Formulaire</h1>
+
+    <!-- Test 1 : model binding -->
+    <!-- TODO : ajouter l'affichage des données saisies via un modèle -->
+    <form name="form1" ng-controller="FormsCtrl as ctrl">
+        Name: <input type="text" name="name" ng-model="ctrl.name"/><br>
+        E-mail: <input type="email" name="email" ng-model="ctrl.email"/><br>
+        {{ctrl}}
+    </form>
+    <!-- Test 2 : 2 états-->
+    <!-- TODO :
+    - ajouter un bouton de sauvegarde et un bouton de reset
+    - ajouter l'affichage de l'état édition et de l'état tampon
+    -->
+    <form name="form2" ng-controller="FormsCtrl as ctrl">
+        Name: <input type="text" name="name" ng-model="ctrl.user.name"/><br>
+        E-mail: <input type="email" name="email" ng-model="ctrl.user.email"/><br>
+        <input type="button" value="RESET" ng-click="ctrl.reset()"/>
+        <input type="button" value="SAVE" ng-click="ctrl.update(ctrl.user)"/><br>
+        Current : {{ctrl.user}}<br>
+        Saved : {{ctrl.master}}
+    </form>
+    <!-- Test 3 : validation -->
+    <!-- TODO : ajouter une validation Angular avec affichage des erreurs et
+    utilisation des classes CSS -->
+    <form name="form3" ng-controller="FormsCtrl as ctrl">
+        Name: <input type="text" name="name" ng-model="ctrl.name" required/><br>
+        <p ng-show="form3.name.$invalid">
+            Invalid: Tell us your name.<br>
+            Errors : {{form3.name.$error}}
+        </p>
+        E-mail: <input type="email" name="email" ng-model="ctrl.email" required/>
+        <p ng-show="form3.email.$invalid">
+            Invalid: This is not a valid email.<br>
+            Errors : {{form3.email.$error}}
+        </p>
+    </form>
+</section>
