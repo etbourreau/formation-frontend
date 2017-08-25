@@ -1,0 +1,42 @@
+<style>
+    #stepsImages{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #imageFrame{
+        width: 33%;
+    }
+    img{
+        width: 100%;
+        height: auto;
+        margin: 10px 0 10px 0;
+    }
+</style>
+<section id="tp07" ng-controller="TripsCommentsCtrl as ctrl" ng-cloak>
+    <h1>TP 07 - Services</h1>
+    <select ng-model="ctrl.trip"
+            ng-change="ctrl.onChangeTrip(ctrl.trip)"
+            ng-options="trip.name for trip in ctrl.trips">
+        <!--<option ng-repeat="trip in ctrl.trips" ng-value="trip">{{trip.name}}</option>-->
+    </select>
+    <br>trip = {{ctrl.trip}}<br>trip0 = {{ctrl.trips[0]}}
+    <div id="trip" ng-if="ctrl.trip">
+        <div id="stepsImages">
+            <div id="imageFrame" ng-repeat="step in ctrl.steps">
+                <img src="{{step.imageUrl}}" title="{{step.name}}"/>
+            </div>
+        </div>
+        <div id="comments">
+            <ul>
+                <li ng-repeat="comment in ctrl.comments">{{comment.id}} : {{comment.text}}</li>
+            </ul>
+            <p ng-show="!ctrl.comments">Soyez le premier à donner un commentaire !</p>
+            <form name="commentForm">
+                <textarea name="commentInput" ng-model="ctrl.commentInput" required></textarea><br>
+                <button ng-disabled="commentForm.$pristine || commentForm.$invalid" ng-click="ctrl.saveComment(ctrl.trip, ctrl.commentInput)">Comment</button>
+            </form>
+        </div>
+    </div>
+</section>

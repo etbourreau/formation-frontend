@@ -24,16 +24,17 @@
     <!-- Test 3 : validation -->
     <!-- TODO : ajouter une validation Angular avec affichage des erreurs et
     utilisation des classes CSS -->
-    <form name="form3" ng-controller="FormsCtrl as ctrl">
+    <form name="ctrl.form3" ng-controller="FormsCtrl as ctrl" novalidate>
         Name: <input type="text" name="name" ng-model="ctrl.name" required/><br>
-        <p ng-show="form3.name.$invalid">
-            Invalid: Tell us your name.<br>
-            Errors : {{form3.name.$error}}
+        <p class="error" ng-show="ctrl.form3.name.$error.required">
+            Invalid: Tell us your name.
         </p>
         E-mail: <input type="email" name="email" ng-model="ctrl.email" required/>
-        <p ng-show="form3.email.$invalid">
-            Invalid: This is not a valid email.<br>
-            Errors : {{form3.email.$error}}
+        <p class="error" ng-show="ctrl.form3.email.$error.required">
+            Invalid: Tell us your email adress..
+        </p>
+        <p class="error" ng-show="ctrl.form3.email.$error.email">
+            Invalid: This is not a valid email.
         </p>
     </form>
 </section>

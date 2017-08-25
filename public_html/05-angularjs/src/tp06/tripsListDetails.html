@@ -1,0 +1,15 @@
+<section id="tp06" ng-controller="TripsListDetailsCtrl as ctrl">
+    <h1>TP 06 - Communication avec $resource</h1>
+    <ul>
+        <form ng-repeat="trip in ctrl.trips" ng-init="ctrl.clicked=false;" ng-controller="TripsListDetailsCtrl as ctrl">
+            <li ng-click="ctrl.clicked=!ctrl.clicked">
+                <p>{{trip.name}} - <strong>{{trip.price}} €</strong></p>
+                <img ng-src="{{trip.imageUrl}}" title="{{trip.name}}" style="width: 500px;"/>
+            </li>
+            <div ng-show="ctrl.clicked">
+                <textarea ng-model="trip.description" style="width: 500px; height: 200px;"></textarea><br>
+                <button ng-click="ctrl.update(trip);">Update</button>
+            </div>
+        </form>
+    </ul>
+</section>

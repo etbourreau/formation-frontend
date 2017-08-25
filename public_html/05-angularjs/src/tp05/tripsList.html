@@ -1,0 +1,15 @@
+<section id="tp05" ng-controller="TripsListCtrl as ctrl">
+    <h1>TP 05 - Communication avec $http</h1>
+    <form name="form" ng-repeat="trip in ctrl.data">
+        <ul>
+            <li>
+                <input type="hidden" name="id" ng-model="trip.id"/>
+                <input name="name" ng-model="trip.name" required/>
+                - 
+                <input name="price" ng-model="trip.price" required/>
+                <button ng-disabled="form.name.$pristine && form.price.$pristine" ng-click="ctrl.save(form)">Save</button> <br><br>
+                <img ng-src="{{trip.imageUrl}}" title="{{trip.name}}"/>
+            </li>
+        </ul>
+    </form>
+</section>

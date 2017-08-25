@@ -1,5 +1,4 @@
 {
-
   "trips": [
     {
       "id": "paris",
@@ -113,7 +112,6 @@
           "name": "Times Square",
           "imageUrl": "img/nyc-timessquare.jpg"
         }
-
       ],
       "geolocation": {
         "latitude": 40.71435,
@@ -132,7 +130,6 @@
           "number": 1,
           "name": "Panthéon",
           "imageUrl": "img/rome-pantheon.jpg"
-
         },
         {
           "number": 2,
@@ -148,7 +145,13 @@
       "geolocation": {
         "latitude": 41.89292,
         "longitude": 12.48252
-      }
+      },
+      "comments": [
+        {
+          "id": "anonymous",
+          "text": "Un peu bof!"
+        }
+      ]
     },
     {
       "id": "rio-de-janeiro",
@@ -174,10 +177,16 @@
           "imageUrl": "img/rio-santateresa.jpg"
         }
       ],
-      "geolocation" : {
-        "latitude" : -22.91340,
-        "longitude" : -43.20071
-      }
+      "geolocation": {
+        "latitude": -22.9134,
+        "longitude": -43.20071
+      },
+      "comments": [
+        {
+          "id": "anonymous",
+          "text": "aaaa"
+        }
+      ]
     },
     {
       "id": "tokyo",
@@ -203,11 +212,10 @@
           "imageUrl": "img/tokyo-skytree.jpg"
         }
       ],
-      "geolocation" : {
-        "latitude" : 35.68949,
-        "longitude" : 139.69171
+      "geolocation": {
+        "latitude": 35.68949,
+        "longitude": 139.69171
       }
     }
   ]
-
 }

@@ -1,0 +1,24 @@
+<section id="tp08" ng-controller="RaceCtrl as ctrl" class="container">
+    <h1>TP 08 - Modules</h1>
+    <h2>Pariez</h2>
+    <div style="float: right">
+        Victoires : {{ctrl.stats.victoires}}<br>
+        Défaites : {{ctrl.stats.defaites}}
+    </div>
+    <div class="btn-group" role="group" aria-label="...">
+        <button ng-repeat="walker in ctrl.getWalkers()" type="button" class="btn btn-{{walker.shirt}}" ng-disabled="ctrl.started && ctrl.betWalker!=walker" ng-click="ctrl.bet(walker)">{{walker.name}}</button>
+    </div>
+    <span>{{ctrl.betString}}</span>
+    <h2>La course</h2>
+    <button class="btn btn-default" ng-click="ctrl.startRace()" ng-disabled="ctrl.started || !ctrl.betString">Lancer la course</button>
+    <br>
+    <br>
+    <div class="progress" ng-repeat="walker in ctrl.getWalkers()">
+        <div class="progress-bar progress-bar-{{walker.shirt}}"
+             role="progressbar" style="width: {{walker.progress}}%; color: black;">
+            {{ctrl.Math.ceil(walker.progress*100)/100}}
+        </div>
+    </div>
+    <br>
+    {{ctrl.endString}}
+</section>

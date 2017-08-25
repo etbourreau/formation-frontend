@@ -31,15 +31,22 @@ module.exports = {
                 loader: 'babel-loader',
                 query: {
                     presets: [['env', {
-                        modules: false,
-                        targets: {browsers: ["last 2 versions"]}
-                    }]]
+                                modules: false,
+                                targets: {browsers: ["last 2 versions"]}
+                            }]]
                 }
             },
-            { test: /\.(css)$/, use: ['style-loader', 'css-loader']},
-            { test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/, use: 'file-loader?name=fonts/[name].[ext]'},
-            { test: /\.html$/, exclude: [/node_modules/], use: 'raw-loader'},
+            {test: /\.(css)$/, use: ['style-loader', 'css-loader']},
+            {test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/, use: 'file-loader?name=fonts/[name].[ext]'},
+            {test: /\.html$/, exclude: [/node_modules/], use: 'raw-loader'}
 
         ]
-    }
+    },
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery'
+        })
+    ]
 };
